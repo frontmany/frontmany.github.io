@@ -56,27 +56,49 @@ header::before {
 
 .header-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    gap: 15px;
 }
 
 .logo {
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--light);
     display: flex;
     align-items: center;
     gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.logo i {
-    color: var(--primary);
+.img-logo {
+    height: 30px; /* Фиксированная высота */
+    width: auto; /* Сохраняет пропорции */
+    max-width: 100px; /* Максимальная ширина на случай очень широких лого */
 }
 
 .slogan {
-    font-size: 16px;
-    color: var(--gray);
-    font-weight: 500;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .img-logo {
+        height: 25px;
+    }
+    
+    .slogan {
+        font-size: 12px;
+    }
 }
 
 /* Герой секция */
