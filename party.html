@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Днем Рождения!</title>
+    <link rel="stylesheet" href="party.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="confetti-container"></div>
+    
+    <header class="animate__animated animate__bounceInDown">
+        <h1>С Днем Рождения! 🎉</h1>
+        <p>Этот день особенный - празднуем вместе!</p>
+    </header>
+
+    <main>
+        <section class="greeting animate__animated animate__fadeIn">
+            <div class="message-box">
+                <p class="animate__animated animate__heartBeat animate__infinite animate__slower">Поздравляю!</p>
+                <p>Желаю счастья, здоровья и успехов во всех начинаниях!</p>
+            </div>
+        </section>
+
+        <section class="photo-gallery">
+            <h2 class="animate__animated animate__fadeInLeft">Наши предкие фото моменты</h2>
+            <div class="gallery-grid">
+                <div class="photo-item animate__animated animate__zoomIn">
+                    <img src="party/1.jpg" alt="Праздничный момент 1">
+                </div>
+                <div class="photo-item animate__animated animate__zoomIn animate__delay-1s">
+                    <img src="party/2.jpg" alt="Праздничный момент 2">
+                </div>
+                <div class="photo-item animate__animated animate__zoomIn animate__delay-2s">
+                    <img src="party/3.jpg" alt="Праздничный момент 3">
+                </div>
+                <div class="photo-item animate__animated animate__zoomIn animate__delay-3s">
+                    <img src="party/4.jpg" alt="Праздничный момент 4">
+                </div>
+                <div class="photo-item animate__animated animate__zoomIn animate__delay-4s">
+                    <img src="party/5.jpg" alt="Праздничный момент 5">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="animate__animated animate__fadeInUp">
+        <p>Создано с ❤️ для особенного человека</p>
+        <div class="social-links">
+        </div>
+    </footer>
+
+    <audio id="bg-music" loop>
+        <source src="party/happy-birthday.mp3" type="audio/mpeg">
+    </audio>
+    
+    <button id="music-toggle" class="music-btn">
+        <i class="fas fa-music"></i>
+    </button>
+
+    <script src="party.js"></script>
+</body>
+</html>

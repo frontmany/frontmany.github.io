@@ -307,3 +307,47 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+
+
+.birthday-btn {
+    display: block;
+    width: 80%;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.birthday-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(255, 107, 107, 0.4);
+    background: linear-gradient(135deg, #ff5252, #ff7676);
+}
+
+.birthday-btn:active {
+    transform: translateY(0);
+}
+
+.birthday-container {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #fff9f9;
+    margin: 40px 0;
+    border-radius: 10px;
+}
+
+.birthday-container h2 {
+    color: #ff6b6b;
+    margin-bottom: 20px;
+}
