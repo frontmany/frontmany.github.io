@@ -9,8 +9,48 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .easter-egg {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #d23669;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+            opacity: 0.7;
+        }
+        
+        .easter-egg:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        
+        .easter-egg i {
+            font-size: 20px;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
 </head>
 <body>
+    <div class="easter-egg" title="Сюрприз!" onclick="window.location.href='./congratulation/congratulation.html'">
+        <i class="fas fa-gift"></i>
+    </div>
+
     <header>
         <div class="container header-container">
             <div class="logo">
@@ -86,5 +126,16 @@
             <div class="copyright">© 2023 Deadlock Messenger. All rights reserved.</div>
         </div>
     </footer>
+
+    <script>
+        document.querySelector('.easter-egg').addEventListener('click', function(e) {
+            e.preventDefault();
+            this.style.transform = 'scale(1.5)';
+            this.style.opacity = '0';
+            setTimeout(() => {
+                window.location.href = './congratulation/congratulation.html';
+            }, 500);
+        });
+    </script>
 </body>
 </html>
