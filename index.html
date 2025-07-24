@@ -1,90 +1,94 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deadlock - Secure Messenger</title>
-    <link rel="icon" href="images/Ilock.png" type="image/png">
-    <meta name="description" content="Deadlock - самый безопасный мессенджер с end-to-end шифрованием">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>Deadlock - Безопасный мессенджер</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="images/Deadlock.png">
 </head>
 <body>
     <header>
-        <div class="container header-container">
-            <div class="logo">
-                <img src="images/Ilock.png" class="img-logo" alt="Instant Messaging">
-                <span>Deadlock</span>
-            </div>
-            <div class="slogan">The most secure messaging platform</div>
+        <div class="logo-container">
+            <img src="images/deadlock_logo.png" alt="Deadlock Logo" class="logo">
+            <h1>Deadlock</h1>
         </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="pages/features.html">Возможности</a></li>
+                <li><a href="pages/security.html">Безопасность</a></li>
+                <li><a href="pages/donate.html">Donate</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle">
+            <img src="images/moon.png" alt="Переключить тему" class="theme-icon">
+        </button>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Private Communication, Reimagined</h1>
-            <p>Deadlock combines military-grade encryption with blazing fast performance in a lightweight package that respects your privacy.</p>
-        </div>
-    </section>
-
-    <div class="container">
-        <section class="features">
-            <div class="feature">
-                <img src="images/messaging.jpg" alt="Instant Messaging">
-                <h3>Instant Messaging</h3>
-                <p>Real-time text communication with read receipts and typing indicators.</p>
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Мессенджер, который защищает вашу приватность</h2>
+                <p>Deadlock использует передовые технологии шифрования, чтобы ваши переписки оставались только вашими.</p>
+                <a href="#download" class="cta-button">Скачать сейчас</a>
             </div>
-            <div class="feature">
-                <img src="images/profile.png" alt="Profile Customization">
-                <h3>Profile Customization</h3>
-                <p>Personalize your profile with photos, status messages and more.</p>
-            </div>
-            <div class="feature">
-                <img src="images/form.jpg" alt="End-to-End Encryption">
-                <h3>End-to-End Encryption</h3>
-                <p>Your messages are secured with AES-256 encryption, only you and the recipient can read them.</p>
+            <div class="hero-image">
+                <img src="images/secure-chat.png" alt="Безопасный чат"
+                    data-theme-icon-light="images/secure-chat.png"
+                    data-theme-icon-dark="images/secure-chat-dark.png"
+                >
             </div>
         </section>
 
-        <section class="app-description">
-            <h2>Why Choose Deadlock?</h2>
-            <p>Deadlock revolutionizes secure communication by combining cutting-edge encryption with an intuitive interface. Our Windows client delivers unparalleled privacy without compromising performance.</p>
-            
-            <ul>
-                <li>Lightning-fast message delivery with read receipts and typing indicators</li>
-                <li>Military-grade end-to-end encryption for all conversations</li>
-                <li>Customizable profiles with photo support and status messages</li>
-                <li>Extremely lightweight - uses less than 10MB RAM</li>
-                <li>No ads, no tracking, no data collection</li>
-                <li>Open-source cryptography for complete transparency</li>
-            </ul>
-            
-            <p>With Deadlock, you get a focused messaging experience that puts your privacy first. No unnecessary features, just secure communication that works.</p>
+        <section class="features-preview">
+            <h3>Почему Deadlock?</h3>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="images/encryption.png" alt="Шифрование"
+                        data-theme-icon-light="images/encryption-light.png"
+                        data-theme-icon-dark="images/encryption.png"
+                    >
+                    <h4>End-to-End Шифрование</h4>
+                    <p>Все сообщения защищены мощным шифрованием</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/no-logs.png" alt="Без логов"
+                        data-theme-icon-light="images/no-logs-light.png"
+                        data-theme-icon-dark="images/no-logs.png"
+                    >
+                    <h4>Нет логов</h4>
+                    <p>Мы не храним ваши данные и метаданные</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/themes.png" alt="Темы"
+                        data-theme-icon-light="images/themes-light.png"
+                        data-theme-icon-dark="images/themes.png"
+                    >
+                    <h4>Темный режим</h4>
+                    <p>Встроенный переключатель тем для комфорта</p>
+                </div>
+            </div>
         </section>
 
-        <section class="download-section">
-            <img src="images/deadlock.png" alt="Deadlock Logo" class="download-logo">
-            <h2>Get Deadlock Today</h2>
-            <p>Available for Windows 10/11. Start your secure communication journey now.</p>
-            <a href="downloads/DeadlockSetup.exe" class="download-btn" download="DeadlockSetup.exe">
-                <i class="fas fa-download"></i>
-                Download Now
-            </a>
-            <div class="version-info">Version 1.1.0 | 5.2 MB | Windows 10/11</div>
+        <section id="download" class="download-section">
+            <h3>Готовы к безопасному общению?</h3>
+            <div class="download-options">
+                <div class="download-card">
+                    <img src="images/Download.png" alt="Скачать для Windows">
+                    <h4>Windows</h4>
+                    <p>Версия 1.1.0 | 64-bit</p>
+                    <a href="downloads/DeadlockSetup.exe" class="download-button">Скачать</a>
+                </div>
+            </div>
         </section>
-    </div>
+    </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">GitHub</a>
-                <a href="#">Contact</a>
-            </div>
-            <div class="copyright">© 2023 Deadlock Messenger. All rights reserved.</div>
-        </div>
+        <p>© 2025 Deadlock Messenger. Все права защищены.</p>
+        <p>Сделано с ♥ для вашей безопасности</p>
     </footer>
+
+    <script src="js/theme-switcher.js"></script>
 </body>
 </html>
