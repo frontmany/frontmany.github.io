@@ -39,6 +39,15 @@ header {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+.beta-text {
+    color: #4285f4; 
+    font-size: 0.6em;
+    vertical-align: super;
+    margin-left: 5px;
+    font-weight: bold;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
 .logo-container {
     display: flex;
     align-items: center;
