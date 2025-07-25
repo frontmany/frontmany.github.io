@@ -2,10 +2,137 @@
 <html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Возможности - Deadlock</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="icon" href="../images/deadlock_logo.png" type="image/x-icon">
+    <style>
+        /* Мобильные стили */
+        @media (max-width: 768px) {
+            header {
+                flex-wrap: wrap;
+                padding: 0.8rem;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                background: var(--card-bg);
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            }
+            
+            .logo-container {
+                order: 0;
+                flex-grow: 1;
+            }
+            
+            .mobile-menu-toggle {
+                order: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                width: 28px;
+                height: 24px;
+                padding: 0;
+            }
+            
+            .theme-toggle {
+                order: 2;
+                padding: 0.5rem;
+            }
+            
+            nav {
+                order: 3;
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-out;
+            }
+            
+            nav.active {
+                max-height: 500px;
+                padding: 0.5rem 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            
+            nav li {
+                width: 100%;
+            }
+            
+            nav a {
+                display: block;
+                padding: 0.8rem 1rem;
+                text-align: center;
+            }
+            
+            .page-container {
+                padding: 1rem;
+            }
+            
+            .page-header {
+                margin-bottom: 1.5rem;
+            }
+            
+            .page-header h2 {
+                font-size: 1.5rem;
+            }
+            
+            .page-header p {
+                font-size: 1rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .feature-card {
+                padding: 1.2rem;
+            }
+            
+            .feature-card.big-card {
+                grid-column: span 1;
+            }
+            
+            .feature-icon img {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .cta-section {
+                padding: 2rem 1rem;
+            }
+            
+            .cta-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+        
+        /* Анимация бургер-меню */
+        .mobile-menu-toggle span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: var(--text-color);
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(4px, 4px);
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(4px, -4px);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,6 +140,11 @@
             <img src="../images/deadlock_logo.png" alt="Deadlock Logo" class="logo">
             <h1>Deadlock <span class="beta-text">Beta</span></h1>
         </div>
+        <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <nav>
             <ul>
                 <li><a href="../index.html">Главная</a></li>
@@ -21,7 +153,7 @@
                 <li><a href="donate.html">Donate</a></li>
             </ul>
         </nav>
-            <button id="theme-toggle" class="theme-toggle">
+        <button id="theme-toggle" class="theme-toggle">
             <img src="../images/moon.png" alt="Переключить тему" class="theme-icon">
         </button>
     </header>
@@ -137,5 +269,6 @@
     </footer>
 
     <script src="../js/theme-switcher.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
